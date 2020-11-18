@@ -9,7 +9,7 @@ request({url,json:true}, (error,{body})=>{
     }else if(body.message){
         callback(body.message,undefined)
     }else{
-        callback(undefined,'It is currently ' + body.main.temp + ' degrees out. Expected ' + body.weather[0].description + '.')
+        callback(undefined,'It is currently ' + body.main.temp + ' degrees out.' + 'The high temperature is ' + body.main.temp_max + ' with a low of ' + body.main.temp_min + '. Expected ' + body.weather[0].description + '.')
     }
     
 })
